@@ -1,0 +1,938 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Css Defaults  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Css Variables */
+:root {
+  /* Brand Colors */
+  --accent: #f00a36;
+  --black: #000;
+  --white: #fff;
+
+  /* Transitions */
+  --transition-100: all 0.2s ease-in-out;
+
+  /* Radius */
+  --radius-100: 0.25rem;
+
+  /* Overlay */
+  --overlay-100: rgba(0, 0, 0, 0.65);
+  --overlay-200: rgba(0, 0, 0, 0.15);
+  --overlay-200-hover: rgba(0, 0, 0, 0);
+}
+
+/* Body */
+body {
+  padding: 0 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Navbar */
+.navbar .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Navbar Brand */
+.navbar .brand {
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.navbar .brand span {
+  color: var(--accent);
+}
+
+/* Navbar Links*/
+.navbar .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  top: 0.6rem;
+}
+
+.navbar .links a {
+  color: var(--black);
+  font-weight: 300;
+  transition: var(--transition-100);
+}
+
+.navbar .links a:hover {
+  color: var(--accent);
+}
+
+.navbar .links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Navbar Divider*/
+.navbar .divider {
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  height: 375px;
+  border-radius: var(--radius-100);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Image*/
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  object-position: center;
+}
+
+/* Hero Content */
+.hero .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-100);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Hero Content Title*/
+.hero .content .title {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* Hero Content Description*/
+.hero .content .description {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 75%;
+  padding: 0 0 1rem 0;
+}
+
+/* Hero Content Button*/
+.hero .content .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  transition: var(--transition-100);
+}
+
+.hero .content .btn:hover {
+  filter: brightness(0.8);
+}
+
+/* Search */
+._search {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+/* Search */
+._search .item {
+  width: 100%;
+}
+
+/* Search Title*/
+._search .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--black);
+}
+
+/* Search Description*/
+._search .description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--black);
+  width: 75%;
+  padding: 0 0 0.75rem 0;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Search input*/
+.search input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius-100);
+  border: 1px solid var(--black);
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+  border-color: #ddd;
+}
+.search input::placeholder {
+  color: #aaa;
+}
+
+.search input:focus {
+  border-color: var(--accent);
+}
+
+/* Search Button*/
+.search button {
+  background: var(--accent);
+  color: var(--white);
+  height: 100%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  border: none;
+  transition: var(--transition-100);
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(0.8);
+}
+
+.search button span {
+  font-size: 1rem;
+}
+
+/* Section */
+section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+/* section Image  */
+section .image {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+/* Section Title*/
+section .title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--black);
+  padding: 0 0 0.5rem 0;
+}
+
+section .title span {
+  color: var(--accent);
+}
+
+/* Section Title*/
+section .description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--black);
+  width: 75%;
+  padding: 0 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+/* section Button*/
+section .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+  transition: var(--transition-100);
+}
+
+section .btn:hover {
+  filter: brightness(0.8);
+}
+
+/* Listing Grid */
+.listing_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  row-gap: 0.5rem;
+  padding: 1rem 0 0 0;
+}
+
+/* Listing Card */
+.listing_card {
+  width: 100%;
+  height: 375px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 50% 50%;
+  transition: var(--transition-100);
+}
+
+.listing_card:hover {
+  transform: scale(1.02);
+}
+
+/* Listing Card Image*/
+.listing_card .image {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  overflow: hidden;
+  position: relative;
+}
+
+.listing_card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Listing Card Image Content*/
+.listing_card .image .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-200);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  transition: var(--transition-100);
+}
+.listing_card:hover .content {
+  background: var(--overlay-200-hover);
+}
+
+/* Listing Card Image Content*/
+.listing_card .image .content .image_count {
+  font-size: 0.75rem;
+  background: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-100);
+
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: var(--black);
+}
+
+.listing_card .image .content .image_count i {
+  color: var(--accent);
+}
+
+/* Listing Card Contents*/
+.listing_card .contents {
+  padding: 1rem;
+}
+
+/* Listing Card Contents price*/
+.listing_card .contents .price {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* Listing Card Contents Category*/
+.listing_card .contents .title {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--black);
+  margin-top: 0.25rem;
+  padding: 0 0 0.75rem 0;
+}
+
+/* Listing Span */
+.listing_span {
+  grid-column: span 3;
+  padding: 1rem 0 0.25rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Listing Span  Item*/
+.listing_span .item {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+.listing_span .item i {
+  color: var(--accent);
+}
+
+/* Listing Span  Item*/
+.listing_span .item form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Listing Span Item Button */
+.listing_span .item form .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition-100);
+  border: none;
+  cursor: pointer;
+}
+
+.listing_span .item form .btn:hover {
+  filter: brightness(0.8);
+}
+
+.listing_span .item form select {
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-100);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 300;
+  outline: none;
+}
+
+/* Listing Error */
+.listing_error {
+  grid-column: span 3;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--black);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.listing_error .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.listing_error i {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.listing_error .error_query {
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+/* Footer Button*/
+.listing_error .item .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition-100);
+}
+
+.listing_error .item .btn:hover {
+  filter: brightness(0.8);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 0 0.5rem 0;
+}
+
+/* Stats */
+.stats .stat {
+  color: var(--black);
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Stats */
+.stats .stat i {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+/* Dealer Grid */
+.dealer_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  row-gap: 0.5rem;
+  padding: 1rem 0 0 0;
+}
+
+/* Dealer Card */
+.dealer_card {
+  width: 100%;
+  height: 135px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  transition: var(--transition-100);
+}
+
+.dealer_card:hover {
+  transform: scale(1.02);
+}
+
+/* Dealer Card Image */
+.dealer_card .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.dealer_card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dealer Card Content */
+.dealer_card .content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--black);
+}
+
+/* Dealer Card Content */
+.dealer_card .content .name {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--black);
+  padding: 0 0 0.35rem 0;
+}
+
+/* Dealer Card Content Cars*/
+.dealer_card .content .cars {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+  padding: 0.25rem 0;
+  padding: 0.5rem 0 0 0;
+}
+
+.dealer_card .content .cars i {
+  color: var(--accent);
+}
+
+/* Brand Grid */
+.brand_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 1rem;
+  row-gap: 0.5rem;
+  padding: 1rem 0 0 0;
+}
+
+/* Brand Card  */
+.brand_card {
+  width: 100%;
+  height: 215px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-100);
+}
+
+.brand_card:hover {
+  transform: scale(1.02);
+}
+
+/* Brand Card  Image*/
+.brand_card img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Brand Card  Name*/
+.brand_card .name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--black);
+  padding: 0.25rem 0;
+}
+
+/* Brand Card  Image*/
+.brand_card .cars {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+  padding: 0.25rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.brand_card .cars i {
+  color: var(--accent);
+}
+
+/* Bread Crumbs */
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  color: var(--black);
+}
+
+.breadcrumbs a {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+  transition: var(--transition-100);
+}
+
+.breadcrumbs a:last-child {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+
+.breadcrumbs span {
+  font-size: 0.85rem;
+  font-weight: 100;
+  color: var(--black);
+}
+
+/* Header  */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 0 1rem 0;
+}
+
+/* Header  */
+.header .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Footer Button*/
+.header .item .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition-100);
+}
+
+.header .item .btn:hover {
+  filter: brightness(0.8);
+}
+
+/* Header Title*/
+.header .title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--black);
+  width: 60%;
+}
+
+/* Header Price*/
+.header .price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* Image Gallery */
+.image_gallery {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 0.25fr 0.25fr;
+  margin: 0 0 1rem 0;
+  gap: 0.5rem;
+}
+
+/* Image Gallery */
+.image_gallery .main_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-100);
+  overflow: hidden;
+}
+
+.image_gallery .slide_image {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image_gallery .slide_image .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+}
+
+.image_gallery .slide_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-100);
+  cursor: pointer;
+  transition: var(--transition-100);
+}
+.image_gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+}
+
+/* Details */
+.details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+/* Details Stats*/
+.details ._stats {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* Details Stats*/
+.details ._stats ._stat_list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Details Stats Stat*/
+.details ._stats .stat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.details ._stats .stat p {
+  font-style: 300;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+.details ._stats .stat p.main {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.details ._stats .stat i {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+/* Details Dealer*/
+.details ._dealer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details ._dealer.make {
+  padding: 1rem 0 0 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* Details description*/
+.details ._description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1.3;
+}
+
+/* Footer  */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Navbar Brand */
+footer .brand {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+footer .brand span {
+  color: var(--accent);
+}
+
+/* Footer  */
+footer .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer .item p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--black);
+}
+
+/* Footer Button*/
+footer .item .btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-100);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition-100);
+}
+
+footer .item .btn:hover {
+  filter: brightness(0.8);
+}
